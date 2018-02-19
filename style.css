@@ -42,3 +42,8 @@ button {
 .hvrState {
 	background-color: #ccc;
 }
+
+#welcome {
+	background-color: white;
+	position: absolute;
+}

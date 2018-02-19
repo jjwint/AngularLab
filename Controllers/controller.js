@@ -1,17 +1,19 @@
 (function() {
 
-	function FormController() {
+	function FormController(TodoService) {
 		var vm = this;
-		vm.toDoItem = [];
 
 		vm.updateInfo = function(item) {
-			vm.toDoItem.push(item);
+			TodoService.setData(item);
+			// vm.words.push(item);
 			document.getElementById("inputEl").value = "";
-			console.log("working");
 		};
+
+		vm.words = TodoService.getData();
+		console.log(vm.words);
 		
 		vm.remove = function(item) {
-			vm.toDoItem.splice(item, 1);
+			vm.words.splice(item, 1);
 		};
 	};
 

@@ -7,8 +7,11 @@
 			.when("/welcome", {
 				template: "<welcome></welcome>"
 			})
-			.when("/taskForm", {
+			.when("/form", {
 				template: "<task-form></task-form>"
 			})
+			.otherwise( {
+				redirectTo: "/welcome"
+			});
 		});
 })();
